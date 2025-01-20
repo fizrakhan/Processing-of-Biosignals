@@ -1,0 +1,21 @@
+function H = spectral_entropy(P, nfactor)
+    % P is the PDS of the window
+    % nfactor scaling factor, needed for normalization of spectral entropy
+    % You can rename the function variables if you want. 
+
+    % Eq 1: Normalization of Power Spectrum
+    Cn = 1/sum(P); % Calculate normalization constant
+    normalized_P = Cn.*P; % Normalize the power spectrum
+    
+    % Compute the negative logarithm of the normalized power spectrum
+    logPn = -log(Pn);
+    % Calculate the spectral entropy
+    
+    S = transpose(Pn)*logPn;; % executing element wise multiplication
+   
+    % Scale the entropy value using the provided scaling factor nfactor
+    H = S / nfactor;
+        
+end
+
+
